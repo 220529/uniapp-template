@@ -36,11 +36,11 @@
 <script setup>
 import { store, login, logout } from '@/store/index.js';
 import { formatDate, getWeekday } from '@/utils/index.js';
-import { getCurrentEnv } from '@/utils/env.js';
+import { getCurrentEnvInfo } from '@/utils/env.js';
 
 const currentDate = formatDate(new Date());
 const weekday = getWeekday(new Date());
-const currentEnv = getCurrentEnv();
+const currentEnv = getCurrentEnvInfo().name;
 
 const handleLogin = () => {
   login({ id: 1, name: '测试用户' });
